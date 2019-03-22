@@ -19,9 +19,11 @@ tag2.save
 
 transaction1 = Transaction.new({'price'=> 49.08,'tag_id' => tag1.id, 'merchant_id'=> merchant1.id})
 transaction1.save
+transaction1.date_added = '2017-01-23 00:00:00'
+transaction1.update
 transaction2 = Transaction.new({'price'=> 25.12,'tag_id' => tag1.id, 'merchant_id'=> merchant1.id})
 transaction2.save
 transaction3 = Transaction.new({'price'=> 17.70,'tag_id' => tag2.id, 'merchant_id'=> merchant2.id})
 transaction3.save
 
-# p transaction1.date_added.friday?
+# p transaction1.date_added.month
