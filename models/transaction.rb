@@ -56,7 +56,18 @@ class Transaction
           ON tags.id = transactions.tag_id
           WHERE tags.name = $1
           ORDER BY transactions.date_added"
-    values = [tag_name]
+    values = [tag_name.downcase]
+    return SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
+  end
+
+  def self.find_by_merchant(merchant_name)
+    sql = "SELECT *
+          FROM transactions
+          JOIN merchants
+          ON merchants.id = transactions.merchant_id
+          WHERE merchants.name = $1
+          ORDER BY transactions.date_added"
+    values = [merchant_name.downcase]
     return SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
   end
 
