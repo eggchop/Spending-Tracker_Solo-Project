@@ -29,4 +29,10 @@ class Transaction
     return SqlRunner.run(sql).map{|hash| Transaction.new(hash)}
   end
 
+  def update
+    sql = "UPDATE transactions SET (date_added,price,tag_id,merchant_id) = ($1,$2,$3,$4) WHERE id = $5"
+    values = [@date_added,@price,@tag_id,@merchant_id,@id]
+    SqlRunner.run(sql,values)
+  end
+
 end

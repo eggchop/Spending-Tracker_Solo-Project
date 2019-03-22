@@ -1,7 +1,8 @@
 require_relative('../db/sql_runner')
 
 class Tag
-  attr_reader :id,:name
+  attr_reader :id
+  attr_accessor :name
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
@@ -23,5 +24,12 @@ class Tag
   def self.all
     sql = "SELECT * FROM tags"
     return SqlRunner.run(sql).map{|hash| Tag.new(hash)}
-  end 
+  end
+
+  def update
+    sql = "UPDATE tags SET name = $1 WHERE id = $2"
+    values = [@name,@id]
+    SqlRunner.run(sql,values)
+  end
+
 end
