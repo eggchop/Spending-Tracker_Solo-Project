@@ -1,18 +1,24 @@
 require_relative('../db/sql_runner')
 
 class Transaction
-  attr_reader :id,:date
+  attr_reader :id,:date_added, :price
+  attr_accessor :tag_id, :merchant_id
   def initialize(options)
-    @id = options['id'] if options['id']
-    @date = options['date']
-    @price = options['price']
-    @tag_id = options['tag_id']
-    @merchant_id = options['merchant_id']
+    @id = options['id'].to_i if options['id']
+    @date_added = options['date_added']
+    @price = options['price'].to_f
+    @tag_id = options['tag_id'].to_i
+    @merchant_id = options['merchant_id'].to_i
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM transactions"
+    SqlRunner.run( sql )
   end
 
   def save()
-    sql = "INSERT INTO transactions (date,price,tag_id,merchant_id) VALUES ($1,$2,$3,$4)RETURNING id"
-    values = [@date,@price,@tag_id,@merchant_id]
+    sql = "INSERT INTO transactions (date_added,price,tag_id,merchant_id) VALUES ($1,$2,$3,$4)RETURNING id"
+    values = [@date_added,@price,@tag_id,@merchant_id]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
     @id = id

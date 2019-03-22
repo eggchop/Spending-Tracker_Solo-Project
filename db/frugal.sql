@@ -14,7 +14,7 @@ CREATE TABLE tags(
 
 CREATE TABLE transactions(
   id SERIAL8 PRIMARY KEY,
-  price INT8,
+  price FLOAT8,
   -- date_added TIMESTAMP DEFAULT NULL,
   date_added VARCHAR(255),
   tag_id INT8 REFERENCES tags(id) ON DELETE CASCADE,
