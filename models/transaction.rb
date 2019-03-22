@@ -49,4 +49,15 @@ class Transaction
     return Transaction.new(result)
   end
 
+  def self.find_by_tag(tag_name)
+    sql = "SELECT *
+          FROM transactions
+          JOIN tags
+          ON tags.id = transactions.tag_id
+          WHERE tags.name = $1
+          ORDER BY transactions.date_added"
+    values = [tag_name]
+    return SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
+  end
+
 end
