@@ -20,4 +20,8 @@ class Tag
     @id = id
   end
 
+  def self.all
+    sql = "SELECT * FROM tags"
+    return SqlRunner.run(sql).map{|hash| Tag.new(hash)}
+  end 
 end

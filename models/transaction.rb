@@ -23,4 +23,10 @@ class Transaction
     id = result.first['id']
     @id = id
   end
+
+  def self.all
+    sql = "SELECT * FROM transactions"
+    return SqlRunner.run(sql).map{|hash| Transaction.new(hash)}
+  end
+
 end

@@ -17,8 +17,6 @@ tag1.save
 tag2 = Tag.new({'name'=> 'pubbing'})
 tag2.save
 
-
-
 transaction1 = Transaction.new({'price'=> 19.93, 'date_added'=>'19/04/2018','tag_id' => tag1.id, 'merchant_id'=> merchant1.id})
 transaction1.save
 transaction2 = Transaction.new({'price'=> 40.29, 'date_added'=>'25/11/2018','tag_id' => tag1.id, 'merchant_id'=> merchant1.id})

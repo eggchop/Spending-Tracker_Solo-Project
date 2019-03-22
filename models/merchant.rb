@@ -20,4 +20,9 @@ class Merchant
     @id = id
   end
 
+  def self.all
+    sql = "SELECT * FROM merchants"
+    return SqlRunner.run(sql).map{|hash| Merchant.new(hash)}
+  end
+
 end
