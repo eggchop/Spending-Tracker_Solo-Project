@@ -34,3 +34,4 @@ transaction3.save
 # p Transaction.all
 # p Transaction.find_by_month(3)
 # p transaction1.get_month
+# p transaction1
