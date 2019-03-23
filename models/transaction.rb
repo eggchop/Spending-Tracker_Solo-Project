@@ -3,13 +3,15 @@ require 'Time'
 
 class Transaction
   attr_reader :id, :price
-  attr_accessor :tag_id, :merchant_id, :date_added
+  attr_accessor :tag_id, :merchant_id, :date_added, :budget_id
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @date_added = options['date_added'] if options['date_added']
     @price = options['price'].to_f
     @tag_id = options['tag_id'].to_i
     @merchant_id = options['merchant_id'].to_i
+    @budget_id = options['budget_id'].to_i
+
   end
 
   def self.delete_all()
@@ -18,8 +20,9 @@ class Transaction
   end
 
   def save()
-    sql = "INSERT INTO transactions (date_added,price,tag_id,merchant_id) VALUES ($1,$2,$3,$4)RETURNING id,date_added"
-    values = [Time.now(),@price,@tag_id,@merchant_id]
+    sql = "INSERT INTO transactions (date_added,price,tag_id,merchant_id,budget_id)
+    VALUES ($1,$2,$3,$4,$5)RETURNING id,date_added"
+    values = [Time.now(),@price,@tag_id,@merchant_id,@budget_id]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
     date_added = result.first['date_added']
@@ -33,8 +36,8 @@ class Transaction
   end
 
   def update
-    sql = "UPDATE transactions SET (date_added,price,tag_id,merchant_id) = ($1,$2,$3,$4) WHERE id = $5"
-    values = [@date_added,@price,@tag_id,@merchant_id,@id]
+    sql = "UPDATE transactions SET (date_added,price,tag_id,merchant_id,budget_id) = ($1,$2,$3,$4,$5) WHERE id = $6"
+    values = [@date_added,@price,@tag_id,@merchant_id,@budget_id,@id]
     SqlRunner.run(sql,values)
   end
 

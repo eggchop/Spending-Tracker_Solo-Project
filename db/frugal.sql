@@ -1,13 +1,15 @@
+DROP TABLE transactions;
 DROP TABLE merchants;
 DROP TABLE tags;
 DROP TABLE budgets;
-DROP TABLE transactions;
+
 
 CREATE TABLE IF NOT EXISTS budgets(
   id SERIAL8 PRIMARY KEY,
   start_date DATE,
   end_date DATE,
-  amount FLOAT8
+  amount FLOAT8,
+  name VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS merchants(
@@ -25,5 +27,6 @@ CREATE TABLE IF NOT EXISTS transactions(
   price FLOAT8,
   date_added TIMESTAMP,
   tag_id INT8 REFERENCES tags(id) ON DELETE CASCADE,
-  merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE
+  merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE,
+  budget_id INT8 REFERENCES budgets(id) ON DELETE CASCADE
 );
