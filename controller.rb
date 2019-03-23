@@ -6,7 +6,7 @@ require_relative('models/tag')
 require_relative('models/merchant')
 also_reload('./models/*')
 
-get '/students' do
+get '/transactions' do
   @transactions = Transaction.all
   erb(:index)
 end

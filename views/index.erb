@@ -4,11 +4,10 @@
   <% @transactions.each do |transaction| %>
 
   <div class="transaction">
-    <!-- <h3><a href="/transactions/<%= transaction.id %>"><%= student.format_name %></a></h3> -->
     <p>Date: <%= transaction.date_added %></p>
-    <p>Merchant: <%= transaction. %></p>
-    <p>Spent: <%= student.house.name.capitalize %></p>
-    <p>Tag: <%= student.house.name.capitalize %></p>
+    <p>Merchant: <%= transaction.merchant.name %></p>
+    <p>Spent: <%= transaction.price %></p>
+    <p>Tag: <%= transaction.merchant.name %></p>
   </div>
 
   <% end %>
