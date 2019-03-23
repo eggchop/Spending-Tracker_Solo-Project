@@ -4,10 +4,12 @@
   <% @transactions.each do |transaction| %>
 
   <div class="transaction">
-    <p>Date: <%= transaction.date_added %></p>
-    <p>Merchant: <%= transaction.merchant.name %></p>
+
+    <p>Created: <%= transaction.date_added %></p>
+    <p>Merchant: <%= transaction.merchant.name.capitalize %></p>
     <p>Spent: <%= transaction.price %></p>
-    <p>Tag: <%= transaction.merchant.name %></p>
+    <p>Tag: <%= transaction.merchant.name.capitalize %></p>
+    <p><a href="/transactions/<%= transaction.id %>">View</a></p>
   </div>
 
   <% end %>
