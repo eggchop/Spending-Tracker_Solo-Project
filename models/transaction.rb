@@ -87,8 +87,19 @@ class Transaction
     return result
   end
 
-  def get_month
-    return @date_added.month
+  def tag
+    tag = Tag.find(@tag_id)
+    return tag
+  end
+
+  def merchant
+    merchant = Merchant.find(@merchant_id)
+    return merchant
+  end
+
+  def budget
+    budget = Budget.find(@budget_id)
+    return budget
   end
 
   def self.total

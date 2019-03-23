@@ -34,5 +34,3 @@ transaction2 = Transaction.new({'price'=> 25.12,'tag_id' => tag1.id, 'merchant_i
 transaction2.save
 transaction3 = Transaction.new({'price'=> 17.70,'tag_id' => tag2.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget2.id})
 transaction3.save
-
-tag2.delete

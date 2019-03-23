@@ -13,6 +13,14 @@ class Merchant
     SqlRunner.run( sql )
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM merchants
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    return Merchant.new(result)
+  end
+
   def save()
     sql = "INSERT INTO merchants (name) VALUES ($1)RETURNING id"
     values = [@name]

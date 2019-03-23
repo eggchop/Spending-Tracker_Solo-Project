@@ -43,6 +43,14 @@ class Budget
     SqlRunner.run(sql,values)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM budgets
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    return Budget.new(result)
+  end
+
   def reduce_budget(amount)
     @amount -= amount unless amount.negative?
     self.update
