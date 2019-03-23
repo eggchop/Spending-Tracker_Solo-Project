@@ -4,7 +4,6 @@
   <% @transactions.each do |transaction| %>
 
   <div class="transaction">
-
     <p>Created: <%= transaction.date_added %></p>
     <p>Merchant: <%= transaction.merchant.name.capitalize %></p>
     <p>Spent: <%= transaction.price %></p>

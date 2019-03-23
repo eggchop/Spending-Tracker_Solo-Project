@@ -21,10 +21,10 @@ end
 #   redirect to '/students'
 # end
 #
-# get '/students/:id' do
-#   @student = Student.find(params['id'])
-#   erb(:show)
-# end
+get '/transactions/:id' do
+  @transaction = Transaction.find(params[:id])
+  erb(:show)
+end
 #
 # get '/students/:id/edit' do
 #   @houses = House.all
