@@ -45,6 +45,7 @@ class Budget
 
   def reduce_budget(amount)
     @amount -= amount unless amount.negative?
+    self.update
   end
 
   def overbudget?
