@@ -4,5 +4,4 @@
 <p>Spent: <%= @transaction.price %></p>
 <p>Tag: <%= @transaction.tag.name.capitalize %></p>
 
-<a href="/students/<%= @student.id %>/edit">Edit</a>
-<form action="/students/<%= @student.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<a href="/transactions/<%= @transaction.id %>/edit">Edit</a>
