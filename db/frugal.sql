@@ -1,6 +1,14 @@
 DROP TABLE merchants;
 DROP TABLE tags;
+DROP TABLE budgets;
 DROP TABLE transactions;
+
+CREATE TABLE IF NOT EXISTS budgets(
+  id SERIAL8 PRIMARY KEY,
+  start_date DATE,
+  end_date DATE,
+  amount FLOAT8
+);
 
 CREATE TABLE IF NOT EXISTS merchants(
   id SERIAL8 PRIMARY KEY,
