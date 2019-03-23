@@ -1,5 +1,8 @@
-
+<p> Transaction Details </p>
 <p>Created: <%= @transaction.date_added %></p>
 <p>Merchant: <%= @transaction.merchant.name.capitalize %></p>
 <p>Spent: <%= @transaction.price %></p>
-<p>Tag: <%= @transaction.merchant.name.capitalize %></p>
+<p>Tag: <%= @transaction.tag.name.capitalize %></p>
+
+<a href="/students/<%= @student.id %>/edit">Edit</a>
+<form action="/students/<%= @student.id %>/delete" method="POST"><input type="submit" value="Delete"></form>

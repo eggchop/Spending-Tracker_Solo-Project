@@ -6,7 +6,7 @@ class Budget
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @start_date = options['start_date']
-    @end_date = options['end_date'] ||
+    @end_date = options['end_date']
     @amount = options['amount'].to_f
     @name = options['name']
   end
