@@ -1,0 +1,24 @@
+<h2>Budgets</h2>
+
+<div id="budget-wrapper">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Amount</th>
+      <th></th>
+    </tr>
+
+  <% @budgets.each do |budget| %>
+    <tr>
+      <td><%= budget.name %></td>
+      <td><%= budget.start_date %></td>
+      <td><%= budget.end_date %></td>
+      <td><%= budget.amount %></td>
+      <td><a href="/budgets/<%= budget.id %>">View</a></td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>
