@@ -31,7 +31,8 @@ class Transaction
   end
 
   def self.all
-    sql = "SELECT * FROM transactions"
+    sql = "SELECT * FROM transactions
+          ORDER BY date_added"
     return SqlRunner.run(sql).map{|hash| Transaction.new(hash)}
   end
 
