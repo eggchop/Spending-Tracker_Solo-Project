@@ -24,11 +24,12 @@ post '/tags' do
   Tag.new(params).save
   redirect to '/tags'
 end
-#
-# get '/transactions/:id' do
-#   @transaction = Transaction.find(params[:id])
-#   erb(:show)
-# end
+
+
+get '/tags/:id' do
+  @tag = Tag.find(params[:id])
+  erb(:"tags/show")
+end
 #
 # get '/transactions/:id/edit' do
 #   @transaction = Transaction.find(params[:id])
