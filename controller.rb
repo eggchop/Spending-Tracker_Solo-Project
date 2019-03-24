@@ -34,14 +34,14 @@ get '/transactions/:id/edit' do
   erb(:edit)
 end
 
-# post '/students/:id' do
-#   student = Student.new(params)
-#   student.update
-#   redirect to "/students/#{params['id']}"
-# end
+post '/transactions/:id' do
+  transaction = Transaction.new(params)
+  transaction.update
+  redirect to "/transactions/#{params['id']}"
+end
 
-# post '/students/:id/delete' do
-#   transaction = Transaction.find(params['id'])
-#   transaction.delete
-#   redirect to '/transactions'
-# end
+post '/transactions/:id/delete' do
+  transaction = Transaction.find(params['id'])
+  transaction.delete
+  redirect to '/transactions'
+end
