@@ -36,8 +36,8 @@ class Transaction
   end
 
   def update
-    sql = "UPDATE transactions SET (date_added,price,tag_id,merchant_id,budget_id) = ($1,$2,$3,$4,$5) WHERE id = $6"
-    values = [@date_added,@price,@tag_id,@merchant_id,@budget_id,@id]
+    sql = "UPDATE transactions SET (price,tag_id,merchant_id,budget_id) = ($1,$2,$3,$4) WHERE id = $5"
+    values = [@price,@tag_id,@merchant_id,@budget_id,@id]
     SqlRunner.run(sql,values)
   end
 
