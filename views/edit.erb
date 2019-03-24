@@ -11,7 +11,11 @@
       <label for="merchant">Select Merchant:</label>
       <select name="merchant_id" id="merchant_select">
         <% @merchants.each do |merchant| %>
+          <% if merchant.id == @transaction.merchant_id%>
+            <option value=<%= merchant.id %> selected><%= merchant.name.capitalize %></option>
+          <% else %>
             <option value=<%= merchant.id %>><%= merchant.name.capitalize %></option>
+          <% end %>
         <% end %>
       </select>
     </div>
@@ -20,7 +24,11 @@
       <label for="tag_select">Select Tag:</label>
       <select name="tag_id" id="tag_select">
         <% @tags.each do |tag| %>
+          <% if tag.id == @transaction.tag_id%>
+            <option value=<%= tag.id %> selected><%= tag.name.capitalize %></option>
+          <% else %>
             <option value=<%= tag.id %>><%= tag.name.capitalize %></option>
+          <% end %>
         <% end %>
       </select>
     </div>
@@ -29,7 +37,11 @@
       <label for="budget_select">Select Budget:</label>
       <select name="budget_id" id="budget_select">
         <% @budgets.each do |budget| %>
-            <option value=<%= budget.id %>><%= budget.name.capitalize %></option>
+          <% if budget.id == @transaction.budget_id%>
+            <option value=<%= budget.id %> selected><%= budget.name.capitalize %></option>
+          <% else %>
+          <option value=<%= budget.id %>><%= budget.name.capitalize %></option>
+          <% end %>
         <% end %>
       </select>
     </div>
