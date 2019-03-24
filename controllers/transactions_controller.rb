@@ -1,14 +1,15 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require_relative('models/budget')
-require_relative('models/transaction')
-require_relative('models/tag')
-require_relative('models/merchant')
-also_reload('./models/*')
+require_relative('../models/budget')
+require_relative('../models/transaction')
+require_relative('../models/tag')
+require_relative('../models/merchant')
+also_reload('../models/*')
+
 
 get '/transactions' do
   @transactions = Transaction.all
-  erb(:index)
+  erb(:"transactions/index")
 end
 
 get '/transactions/new' do
@@ -16,7 +17,7 @@ get '/transactions/new' do
   @merchants = Merchant.all
   @tags = Tag.all
   @budgets = Budget.all
-  erb(:new)
+  erb(:"transactions/new")
 end
 
 post '/transactions' do
@@ -26,7 +27,7 @@ end
 
 get '/transactions/:id' do
   @transaction = Transaction.find(params[:id])
-  erb(:show)
+  erb(:"transactions/show")
 end
 
 get '/transactions/:id/edit' do
@@ -35,7 +36,7 @@ get '/transactions/:id/edit' do
   @merchants = Merchant.all
   @tags = Tag.all
   @budgets = Budget.all
-  erb(:edit)
+  erb(:"transactions/edit")
 end
 
 post '/transactions/:id' do

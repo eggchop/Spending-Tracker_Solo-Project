@@ -1,0 +1,18 @@
+<h2>Tags</h2>
+
+<div id="tag-wrapper">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+
+  <% @tags.each do |tag| %>
+    <tr>
+      <td><%= tag.name%></td>
+      <td><a href="/tags/<%= tag.id %>">View</a></td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>
