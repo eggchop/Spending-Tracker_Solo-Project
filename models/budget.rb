@@ -32,8 +32,8 @@ class Budget
   end
 
   def update
-    sql = "UPDATE budgets SET (start_date,end_date,amount,name) = ($1,$2,$3,$4) WHERE id = $4"
-    values = [@start_date,@end_date,@amount,@name,@id]
+    sql = "UPDATE budgets SET (end_date,amount,name) = ($1,$2,$3) WHERE id = $4"
+    values = [@end_date,@amount,@name,@id]
     SqlRunner.run(sql,values)
   end
 
