@@ -12,13 +12,13 @@ get '/tags' do
   erb(:"tags/index")
 end
 
-# get '/tags/new' do
-#   @transactions = Transaction.all
-#   @merchants = Merchant.all
-#   @tags = Tag.all
-#   @budgets = Budget.all
-#   erb(:new)
-# end
+get '/tags/new' do
+  @transactions = Transaction.all
+
+  @tags = Tag.all
+
+  erb(:"tags/new")
+end
 #
 # post '/transactions' do
 #   Transaction.new(params).save
