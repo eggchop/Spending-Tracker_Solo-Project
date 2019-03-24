@@ -9,7 +9,7 @@
 
   <% @tags.each do |tag| %>
     <tr>
-      <td><%= tag.name%></td>
+      <td><%= tag.name.capitalize%></td>
       <td><a href="/tags/<%= tag.id %>">View</a></td>
     </tr>
     <% end %>

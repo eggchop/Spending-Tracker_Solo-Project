@@ -1,5 +1,5 @@
 <h2>Edit Tag</h2>
-<form method="POST" action="/tags">
+<form method="POST" action="/tags/<%=@tag.id%>">
   <div class="form-wrapper">
 
     <div class="form-edit-tag">
@@ -12,4 +12,8 @@
     </div>
 
   </div>
+</form>
+
+<form action="/tags/<%= @tag.id %>/delete" method="post">
+  <input type="submit" value="Delete"/>
 </form>

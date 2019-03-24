@@ -35,15 +35,15 @@ get '/tags/:id/edit' do
   @tag = Tag.find(params[:id])
   erb(:"tags/edit")
 end
-#
-# post '/transactions/:id' do
-#   transaction = Transaction.new(params)
-#   transaction.update
-#   redirect to "/transactions/#{params[:id]}"
-# end
-#
-# post '/transactions/:id/delete' do
-#   transaction = Transaction.find(params[:id])
-#   transaction.delete
-#   redirect to '/transactions'
-# end
+
+post '/tags/:id' do
+  tag = Tag.new(params)
+  tag.update
+  redirect to "/tags/#{params[:id]}"
+end
+
+post '/tags/:id/delete' do
+  tags = Tag.find(params[:id])
+  tags.delete
+  redirect to '/tags'
+end
