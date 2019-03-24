@@ -40,9 +40,9 @@ end
 #   student.update
 #   redirect to "/students/#{params['id']}"
 # end
-#
+
 # post '/students/:id/delete' do
-#   student = Student.find(params['id'])
-#   student.delete
-#   redirect to '/students'
+#   transaction = Transaction.find(params['id'])
+#   transaction.delete
+#   redirect to '/transactions'
 # end
