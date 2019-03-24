@@ -28,13 +28,12 @@ get '/transactions/:id' do
   @transaction = Transaction.find(params[:id])
   erb(:show)
 end
-#
-# get '/students/:id/edit' do
-#   @houses = House.all
-#   @student = Student.find(params['id'])
-#   erb(:edit)
-# end
-#
+
+get '/transactions/:id/edit' do
+  @transactions = Transaction.find(params['id'])
+  erb(:edit)
+end
+
 # post '/students/:id' do
 #   student = Student.new(params)
 #   student.update
