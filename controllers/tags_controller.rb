@@ -30,15 +30,11 @@ get '/tags/:id' do
   @tag = Tag.find(params[:id])
   erb(:"tags/show")
 end
-#
-# get '/transactions/:id/edit' do
-#   @transaction = Transaction.find(params[:id])
-#   @transactions = Transaction.all
-#   @merchants = Merchant.all
-#   @tags = Tag.all
-#   @budgets = Budget.all
-#   erb(:edit)
-# end
+
+get '/tags/:id/edit' do
+  @tag = Tag.find(params[:id])
+  erb(:"tags/edit")
+end
 #
 # post '/transactions/:id' do
 #   transaction = Transaction.new(params)
