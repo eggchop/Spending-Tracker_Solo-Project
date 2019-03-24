@@ -11,16 +11,19 @@ get '/transactions' do
   erb(:index)
 end
 
-# get '/students/new' do
-#   @houses = House.all
-#   erb(:new)
-# end
-#
-# post '/students' do
-#   Student.new(params).save
-#   redirect to '/students'
-# end
-#
+get '/transactions/new' do
+  @transactions = Transaction.all
+  @merchants = Merchant.all
+  @tags = Tag.all
+  @budgets = Budget.all
+  erb(:new)
+end
+
+post '/transactions' do
+  Transaction.new(params).save
+  redirect to '/transactions'
+end
+
 get '/transactions/:id' do
   @transaction = Transaction.find(params[:id])
   erb(:show)

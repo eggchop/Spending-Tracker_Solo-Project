@@ -1,0 +1,42 @@
+<h2>New Transaction</h2>
+<form method="POST" action="/transactions">
+  <div class="form-wrapper">
+
+    <div class="form-newt">
+      <label for="price">Price:</label>
+      <input type="number" name="price" step = "0.01" id="price"/>
+    </div>
+
+    <div class="form-newt">
+      <label for="merchant">Select Merchant:</label>
+      <select name="merchant_id" id="merchant_select">
+        <% @merchants.each do |merchant| %>
+            <option value=<%= merchant.id %>><%= merchant.name.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-newt">
+      <label for="tag_select">Select Tag:</label>
+      <select name="tag_id" id="tag_select">
+        <% @tags.each do |tag| %>
+            <option value=<%= tag.id %>><%= tag.name.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-newt">
+      <label for="budget_select">Select Budget:</label>
+      <select name="budget_id" id="budget_select">
+        <% @budgets.each do |budget| %>
+            <option value=<%= budget.id %>><%= budget.name.capitalize %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-newt">
+      <input type="submit" value="Create Transaction"/>
+    </div>
+
+  </div>
+</form>
