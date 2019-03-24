@@ -19,11 +19,11 @@ get '/tags/new' do
 
   erb(:"tags/new")
 end
-#
-# post '/transactions' do
-#   Transaction.new(params).save
-#   redirect to '/transactions'
-# end
+
+post '/tags' do
+  Tag.new(params).save
+  redirect to '/tags'
+end
 #
 # get '/transactions/:id' do
 #   @transaction = Transaction.find(params[:id])
