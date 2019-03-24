@@ -1,0 +1,19 @@
+<h2>Edit Merchant</h2>
+<form method="POST" action="/merchants/<%=@merchant.id%>">
+  <div class="form-wrapper">
+
+    <div class="form-edit-merchant">
+      <label for="name">Merchant Name:</label>
+      <input type="text" name="name" id="name" value="<%=@merchant.name%>"/>
+    </div>
+
+    <div class="form-edit-merchant">
+      <input type="submit" value="Update Merchant"/>
+    </div>
+
+  </div>
+</form>
+
+<form action="/merchants/<%= @merchant.id %>/delete" method="post">
+  <input type="submit" value="Delete"/>
+</form>

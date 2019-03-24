@@ -13,10 +13,7 @@ get '/tags' do
 end
 
 get '/tags/new' do
-  @transactions = Transaction.all
-
   @tags = Tag.all
-
   erb(:"tags/new")
 end
 

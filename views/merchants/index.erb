@@ -1,0 +1,18 @@
+<h2>Merchants</h2>
+
+<div id="merchant-wrapper">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th></th>
+    </tr>
+
+  <% @merchants.each do |merchant| %>
+    <tr>
+      <td><%= merchant.name.capitalize%></td>
+      <td><a href="/merchants/<%= merchant.id %>">View</a></td>
+    </tr>
+    <% end %>
+  </table>
+
+</div>
