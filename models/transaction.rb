@@ -103,10 +103,10 @@ class Transaction
     return budget
   end
 
-  # def display_readable_date
-  #   timestamp = Time.parse(@date_added)
-  #   return timestamp.strftime("%d-%b-%y")
-  # end
+  def display_readable_date
+    timestamp = Time.parse(@date_added)
+    return timestamp.strftime("%d-%b-%y")
+  end
 
   def self.total
     sql = "SELECT SUM(transactions.price) AS total

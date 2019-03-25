@@ -36,6 +36,6 @@ transaction3 = Transaction.new({'price'=> 17.70,'tag_id' => tag2.id, 'merchant_i
 transaction3.save
 
 # all = Transaction.all
-# all.each {|obj| p obj.date_added.class}
-
+# all.each {|obj| p obj.display_readable_date}
+#
 # p transaction1.date_added.class

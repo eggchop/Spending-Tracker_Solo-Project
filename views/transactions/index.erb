@@ -1,16 +1,22 @@
 <h2>Transactions</h2>
 
-<form method="POST" id="my_form" action=/transactions/merchants></form>
+<div class="filter-menu">
 
-<table>
-    <tr>
-      <td>Filter: Merchant</td>
-        <td>
-            <input type="text" name="search" form="my_form" />
-            <button type="submit" form="my_form">ok</button>
-        </td>
-    </tr>
-</table>
+  <h2>Filter By</h2>
+  <p>Merchant</p>
+  <p><form method="GET" id="merchants_form" action=/transactions/merchants>
+  <input type="text" name="search" form="merchants_form" />
+  <button type="submit" form="merchants_form">ok</button></form>
+
+  <p>Tag</p>
+  <p><form method="GET" id="tags_form" action=/transactions/tags>
+  <input type="text" name="search" form="tags_form" />
+  <button type="submit" form="tags_form">ok</button></form>
+
+
+  <a href='/transactions'>Clear Filter</a>
+
+</div>
 
 <div id="transaction-wrapper">
   <table>
@@ -24,7 +30,7 @@
 
   <% @transactions.each do |transaction| %>
     <tr>
-      <td><%= transaction.date_added %></td>
+      <td><%= transaction.display_readable_date %></td>
       <td><%= transaction.merchant.name.capitalize %></td>
       <td><%= transaction.price %></td>
       <td><%= transaction.tag.name.capitalize %></td>

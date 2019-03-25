@@ -15,13 +15,19 @@ end
 #####################################
 #display all transactions by merchant
 get '/transactions/merchants' do
-  @transactions = @@global
-  erb(:"transactions/merchants")
+  @transactions = Transaction.find_by_merchant(params['search'])
+  erb(:"transactions/index")
 end
-post '/transactions/merchants' do
-  @@global = Transaction.find_by_merchant(params['search'])
-  redirect to '/transactions/merchants'
+
+#####################################
+
+#####################################
+#display all transactions by tags
+get '/transactions/tags' do
+  @transactions = Transaction.find_by_tag(params['search'])
+  erb(:"transactions/index")
 end
+
 #####################################
 
 get '/transactions/new' do
