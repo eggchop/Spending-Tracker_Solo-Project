@@ -1,1 +1,11 @@
-<p>Working!</p>
+<h1>Frugal</h1>
+
+<h2>Spend, Track, Save</h2>
+
+<% if @budgets.count == 0 %>
+  <p>Get Started</p>
+  <p><a href='/budgets/new'>Create Your Budget</a></p>
+<% else %>
+  <p>Welcome Back!</p>
+  <p><a href='/budgets'>My Dashboard</a></p>
+<% end %>

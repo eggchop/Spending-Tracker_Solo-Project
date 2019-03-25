@@ -57,7 +57,7 @@ class Budget
   end
 
   def budget_remaining
-    return @amount - self.total_spend
+    return "£%.2f" % (@amount - self.total_spend)
   end
 
   def overbudget?

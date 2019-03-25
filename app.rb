@@ -8,5 +8,6 @@ require_relative('controllers/budgets_controller')
 
 
 get '/' do
+  @budgets = Budget.all
   erb( :index )
 end

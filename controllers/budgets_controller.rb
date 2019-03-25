@@ -31,5 +31,5 @@ end
 post '/budgets/:id/delete' do
   budget = Budget.find(params[:id])
   budget.delete
-  redirect to '/budgets'
+  redirect to '/'
 end
