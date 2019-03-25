@@ -8,7 +8,7 @@ also_reload('../models/*')
 
 
 get '/budgets' do
-  @budgets = Budget.all
+  @budget = Budget.all.first
   erb(:"budgets/index")
 end
 

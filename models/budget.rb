@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require 'Time'
 
 class Budget
   attr_accessor :start_date, :end_date, :amount, :name
@@ -51,12 +52,21 @@ class Budget
     return Budget.new(result)
   end
 
-  def reduce_budget(amount)
-    @amount -= amount unless amount.negative?
-    self.update
-  end
 
   def overbudget?
     return @amount <= 0
+  end
+
+  def display_readable_date_start
+    timestamp = Time.parse(@start_date)
+    return timestamp.strftime("%d-%b-%y")
+  end
+  def display_readable_date_end
+    timestamp = Time.parse(@end_date)
+    return timestamp.strftime("%d-%b-%y")
+  end
+
+  def display_currency
+    return "£%.2f" % @amount
   end
 end

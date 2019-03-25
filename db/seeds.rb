@@ -40,4 +40,4 @@ transaction3.save
 #
 # p transaction1.date_added.class
 
-p transaction1.display_currency
+p budget1.display_currency

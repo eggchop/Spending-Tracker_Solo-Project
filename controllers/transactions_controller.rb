@@ -15,7 +15,7 @@ end
 #####################################
 #display all transactions by merchant
 get '/transactions/merchants' do
-  @transactions = Transaction.find_by_merchant(params['search'])
+  @transactions = Transaction.find_by_merchant(params[:search])
   erb(:"transactions/index")
 end
 
@@ -24,7 +24,7 @@ end
 #####################################
 #display all transactions by tags
 get '/transactions/tags' do
-  @transactions = Transaction.find_by_tag(params['search'])
+  @transactions = Transaction.find_by_tag(params[:search])
   erb(:"transactions/index")
 end
 
