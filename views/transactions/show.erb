@@ -1,7 +1,7 @@
 <p> Transaction Details </p>
 <p>Created: <%= @transaction.date_added%></p>
 <p>Merchant: <%= @transaction.merchant.name.capitalize %></p>
-<p>Spent: <%= @transaction.price %></p>
+<p>Spent: <%= @transaction.display_currency %></p>
 <p>Tag: <%= @transaction.tag.name.capitalize %></p>
 
 <a href="/transactions/<%= @transaction.id %>/edit">Edit</a>

@@ -108,6 +108,10 @@ class Transaction
     return timestamp.strftime("%d-%b-%y")
   end
 
+  def display_currency
+    return "£%.2f" % @price
+  end
+
   def self.total
     sql = "SELECT SUM(transactions.price) AS total
           FROM transactions"

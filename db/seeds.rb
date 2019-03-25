@@ -39,3 +39,5 @@ transaction3.save
 # all.each {|obj| p obj.display_readable_date}
 #
 # p transaction1.date_added.class
+
+p transaction1.display_currency

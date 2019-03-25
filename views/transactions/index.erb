@@ -3,18 +3,23 @@
 <div class="filter-menu">
 
   <h2>Filter By</h2>
-  <p>Merchant</p>
-  <p><form method="GET" id="merchants_form" action=/transactions/merchants>
-  <input type="text" name="search" form="merchants_form" />
-  <button type="submit" form="merchants_form">ok</button></form>
+  <div class="filter-merchant">
+    <p>Merchant</p>
+    <p><form method="GET" id="merchants_form" action=/transactions/merchants>
+    <input type="text" name="search" form="merchants_form" />
+    <button type="submit" form="merchants_form">Filter</button></form>
+  </div>
 
-  <p>Tag</p>
-  <p><form method="GET" id="tags_form" action=/transactions/tags>
-  <input type="text" name="search" form="tags_form" />
-  <button type="submit" form="tags_form">ok</button></form>
+  <div class="filter-tags">
+    <p>Tag</p>
+    <p><form method="GET" id="tags_form" action=/transactions/tags>
+    <input type="text" name="search" form="tags_form" />
+    <button type="submit" form="tags_form">Filter</button></form>
+  </div>
 
-
-  <a href='/transactions'>Clear Filter</a>
+  <div class="filter-clear">
+    <a href='/transactions'>Clear Filter</a>
+  </div>
 
 </div>
 
@@ -32,7 +37,7 @@
     <tr>
       <td><%= transaction.display_readable_date %></td>
       <td><%= transaction.merchant.name.capitalize %></td>
-      <td><%= transaction.price %></td>
+      <td><%= transaction.display_currency %></td>
       <td><%= transaction.tag.name.capitalize %></td>
       <td><a href="/transactions/<%= transaction.id %>">View</a></td>
     </tr>
