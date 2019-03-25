@@ -1,13 +1,12 @@
 <h2>New Transaction</h2>
 <form method="POST" action="/transactions">
   <div class="form-wrapper">
-
-    <div class="form-newt">
+    <div class="form-new-transaction">
       <label for="price">Price:</label>
       <input type="number" name="price" step = "0.01" id="price" pattern="^\d*(\.\d{0,2})?$"/>
     </div>
 
-    <div class="form-newt">
+    <div class="form-new-transaction">
       <label for="merchant">Select Merchant:</label>
       <select name="merchant_id" id="merchant_select">
         <% @merchants.each do |merchant| %>
@@ -16,7 +15,7 @@
       </select>
     </div>
 
-    <div class="form-newt">
+    <div class="form-new-transaction">
       <label for="tag_select">Select Tag:</label>
       <select name="tag_id" id="tag_select">
         <% @tags.each do |tag| %>
@@ -25,7 +24,7 @@
       </select>
     </div>
 
-    <div class="form-newt">
+    <div class="form-new-transaction">
       <label for="budget_select">Select Budget:</label>
       <select name="budget_id" id="budget_select">
         <% @budgets.each do |budget| %>
@@ -34,7 +33,7 @@
       </select>
     </div>
 
-    <div class="form-newt">
+    <div class="form-new-transaction">
       <input type="submit" value="Create Transaction"/>
     </div>
 

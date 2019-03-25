@@ -12,6 +12,18 @@ get '/transactions' do
   erb(:"transactions/index")
 end
 
+#####################################
+#display all transactions by merchant
+get '/transactions/merchants' do
+  @transactions = @@global
+  erb(:"transactions/merchants")
+end
+post '/transactions/merchants' do
+  @@global = Transaction.find_by_merchant(params['search'])
+  redirect to '/transactions/merchants'
+end
+#####################################
+
 get '/transactions/new' do
   @transactions = Transaction.all
   @merchants = Merchant.all
