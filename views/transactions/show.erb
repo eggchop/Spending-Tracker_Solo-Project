@@ -1,5 +1,6 @@
+<% require 'Time' %>
 <p> Transaction Details </p>
-<p>Created: <%= @transaction.date_added %></p>
+<p>Created: <%= @transaction.date_added%></p>
 <p>Merchant: <%= @transaction.merchant.name.capitalize %></p>
 <p>Spent: <%= @transaction.price %></p>
 <p>Tag: <%= @transaction.tag.name.capitalize %></p>

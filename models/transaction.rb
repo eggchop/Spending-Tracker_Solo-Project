@@ -22,12 +22,12 @@ class Transaction
   def save()
     sql = "INSERT INTO transactions (date_added,price,tag_id,merchant_id,budget_id)
     VALUES ($1,$2,$3,$4,$5)RETURNING id,date_added"
-    values = [Time.now(),@price,@tag_id,@merchant_id,@budget_id]
+    values = [Date.today(),@price,@tag_id,@merchant_id,@budget_id]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
     date_added = result.first['date_added']
     @id = id
-    @date_added = Time.parse(date_added)
+    @date_added = date_added
   end
 
   def self.all
@@ -102,6 +102,11 @@ class Transaction
     budget = Budget.find(@budget_id)
     return budget
   end
+
+  # def display_readable_date
+  #   timestamp = Time.parse(@date_added)
+  #   return timestamp.strftime("%d-%b-%y")
+  # end
 
   def self.total
     sql = "SELECT SUM(transactions.price) AS total
