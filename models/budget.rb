@@ -52,6 +52,13 @@ class Budget
     return Budget.new(result)
   end
 
+  def total_spend
+    return Transaction.total
+  end
+
+  def budget_remaining
+    return @amount - self.total_spend
+  end
 
   def overbudget?
     return @amount <= 0
