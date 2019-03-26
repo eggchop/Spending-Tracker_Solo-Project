@@ -127,4 +127,5 @@ class Transaction
     values = [tag.downcase]
     return SqlRunner.run(sql,values).first['total'].to_f
   end
+
 end
