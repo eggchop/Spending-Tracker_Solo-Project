@@ -57,7 +57,7 @@ class Transaction
   end
 
   def self.find_by_tag(tag_name)
-      sql = "SELECT *
+      sql = "SELECT transactions.*
             FROM transactions
             JOIN tags
             ON tags.id = transactions.tag_id
@@ -68,7 +68,7 @@ class Transaction
     end
 
   def self.find_by_merchant(merchant_name)
-    sql = "SELECT *
+    sql = "SELECT transactions.*
           FROM transactions
           JOIN merchants
           ON merchants.id = transactions.merchant_id
