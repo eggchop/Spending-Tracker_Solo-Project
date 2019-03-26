@@ -108,4 +108,23 @@ class Transaction
     return SqlRunner.run(sql).first['total'].to_f
   end
 
+  def self.total_by_merchant(merchant)
+    sql = "SELECT SUM(transactions.price) AS total
+          FROM transactions
+          JOIN merchants
+          ON merchants.id = transactions.merchant_id
+          WHERE merchants.name = $1"
+    values = [merchant.downcase]
+    return SqlRunner.run(sql,values).first['total'].to_f
+  end
+
+  def self.total_by_tag(tag)
+    sql = "SELECT SUM(transactions.price) AS total
+          FROM transactions
+          JOIN tags
+          ON tags.id = transactions.tag_id
+          WHERE tags.name = $1"
+    values = [tag.downcase]
+    return SqlRunner.run(sql,values).first['total'].to_f
+  end
 end
