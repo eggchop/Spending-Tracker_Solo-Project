@@ -21,6 +21,14 @@ class Tag
     return Tag.new(result)
   end
 
+  def self.find_by_name(name)
+    sql = "SELECT * FROM tags
+    WHERE name = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    return Tag.new(result)
+  end
+
   def save()
     sql = "INSERT INTO tags (name) VALUES ($1) RETURNING id"
     values = [@name]

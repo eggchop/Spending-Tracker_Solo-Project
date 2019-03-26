@@ -57,15 +57,15 @@ class Transaction
   end
 
   def self.find_by_tag(tag_name)
-    sql = "SELECT *
-          FROM transactions
-          JOIN tags
-          ON tags.id = transactions.tag_id
-          WHERE tags.name = $1
-          ORDER BY transactions.date_added"
-    values = [tag_name.downcase]
-    return SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
-  end
+      sql = "SELECT *
+            FROM transactions
+            JOIN tags
+            ON tags.id = transactions.tag_id
+            WHERE tags.name = $1
+            ORDER BY transactions.date_added"
+      values = [tag_name.downcase]
+      return SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
+    end
 
   def self.find_by_merchant(merchant_name)
     sql = "SELECT *
@@ -77,16 +77,6 @@ class Transaction
     values = [merchant_name.downcase]
     return SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
   end
-
-  # def self.find_by_month(month_number, year=2019)
-  #   sql = "SELECT *
-  #         FROM transactions
-  #         WHERE date_part('month', date_added) = $1 AND date_part('year', date_added) = $2
-  #         ORDER BY date_added"
-  #   values = [month_number,year]
-  #   result= SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
-  #   return result
-  # end
 
   def tag
     tag = Tag.find(@tag_id)
@@ -117,7 +107,5 @@ class Transaction
           FROM transactions"
     return SqlRunner.run(sql).first['total'].to_f
   end
-
-
 
 end

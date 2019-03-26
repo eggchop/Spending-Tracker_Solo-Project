@@ -16,13 +16,16 @@ end
 #display all transactions by merchant
 get '/transactions/merchants' do
   @transactions = Transaction.find_by_merchant(params[:search])
-  erb(:"transactions/index_merchants")
+  # @total_trans = Transaction.total_by_merchant(params[:search])
+  @total_trans = Transaction.total
+  erb(:"transactions/index")
 end
 
 #display all transactions by tags
 get '/transactions/tags' do
   @transactions = Transaction.find_by_tag(params[:search])
-  erb(:"transactions/index_tags")
+  @total_trans = Transaction.total
+  erb(:"transactions/index")
 end
 
 get '/transactions/new' do
