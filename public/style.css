@@ -77,6 +77,10 @@ table {
 }
 
 .footer {
-  display: flex;
-  justify-content: center;
+  padding: 5px;
+  margin-top: 30%;
+  text-align: center;
+  border-top: grey 3px solid;
+  background-color: black;
+  color: #e5e5e5;
 }
