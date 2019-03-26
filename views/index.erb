@@ -1,11 +1,9 @@
 <h1>Home</h1>
 
-<h2>Spend, Track, Save</h2>
-
 <% if @budgets.count == 0 %>
-  <p>Get Started</p>
+  <h2>Get Started</h2>
   <p><a href='/budgets/new'>Create Your Budget</a></p>
 <% else %>
-  <p>Welcome Back!</p>
+  <h2>Welcome Back!</h2>
   <p><a href='/budgets'>My Dashboard</a></p>
 <% end %>
