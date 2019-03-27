@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS tags(
 CREATE TABLE IF NOT EXISTS transactions(
   id SERIAL8 PRIMARY KEY,
   price FLOAT8,
-  date_added DATE,
+  date_added TIMESTAMP,
   tag_id INT8 REFERENCES tags(id) ON DELETE CASCADE,
   merchant_id INT8 REFERENCES merchants(id) ON DELETE CASCADE,
   budget_id INT8 REFERENCES budgets(id) ON DELETE CASCADE

@@ -22,7 +22,7 @@ class Transaction
   def save()
     sql = "INSERT INTO transactions (date_added,price,tag_id,merchant_id,budget_id)
     VALUES ($1,$2,$3,$4,$5)RETURNING id,date_added"
-    values = [Date.today(),@price,@tag_id,@merchant_id,@budget_id]
+    values = [Time.now(),@price,@tag_id,@merchant_id,@budget_id]
     result = SqlRunner.run(sql, values)
     id = result.first['id']
     date_added = result.first['date_added']
