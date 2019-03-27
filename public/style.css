@@ -171,9 +171,17 @@ thead {
 }
 
 .buttons {
-  font-size: 25px;
+  font-size: 15px;
+  margin: 25px;
 }
 
+.budget-info {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+
+}
 
 .footer {
   padding: 5px;

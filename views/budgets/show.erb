@@ -1,13 +1,15 @@
-<p> Budget Details </p>
+<h2> Budget Details </h2>
 
 <div id="budget-wrapper">
   <table>
+    <thead>
     <tr>
       <th>Name</th>
       <th>Start Date</th>
       <th>End Date</th>
       <th>Amount</th>
     </tr>
+    </thead>
     <tr>
       <td><%= @budget.name %></td>
       <td><%= @budget.display_readable_date_start%></td>
@@ -19,5 +21,5 @@
 </div>
 
 <form action="/budgets/<%= @budget.id %>/delete" method="post">
-  <input type="submit" value="Delete"/>
+  <input class= "buttons" type="submit" value="Delete"/>
 </form>
