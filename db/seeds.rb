@@ -13,15 +13,23 @@ Transaction.delete_all
 
 merchant1 = Merchant.new({'name'=>'Tesco'})
 merchant1.save
-merchant2 = Merchant.new({'name'=>'Lothian Buses'})
+merchant2 = Merchant.new({'name'=>'Landlord'})
 merchant2.save
+merchant3 = Merchant.new({'name'=>'Chanter'})
+merchant3.save
+merchant4 = Merchant.new({'name'=>'Odeon'})
+merchant4.save
 
 tag1 = Tag.new({'name'=> 'groceries'})
 tag1.save
 tag2 = Tag.new({'name'=> 'transport'})
 tag2.save
+tag3 = Tag.new({'name'=> 'pub'})
+tag3.save
+tag4 = Tag.new({'name'=> 'rent'})
+tag4.save
 
-budget1 = Budget.new({'name'=> 'March','end_date'=> '2019-05-30', 'amount'=> 300.01})
+budget1 = Budget.new({'name'=> "Charlie's Budget",'end_date'=> '2019-05-30', 'amount'=> 1000.00})
 budget1.save
 
 
@@ -29,7 +37,7 @@ transaction1 = Transaction.new({'price'=> 49.08,'tag_id' => tag1.id, 'merchant_i
 transaction1.save
 # transaction1.date_added = Date.new(2017,01,23)
 # transaction1.update
-transaction2 = Transaction.new({'price'=> 25.12,'tag_id' => tag1.id, 'merchant_id'=> merchant1.id,'budget_id'=> budget1.id})
+transaction2 = Transaction.new({'price'=> 30.00,'tag_id' => tag3.id, 'merchant_id'=> merchant3.id,'budget_id'=> budget1.id})
 transaction2.save
-transaction3 = Transaction.new({'price'=> 17.70,'tag_id' => tag2.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3 = Transaction.new({'price'=> 400.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
 transaction3.save

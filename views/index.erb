@@ -1,12 +1,12 @@
 
 <% if @budgets.count == 0 %>
 
-  <h2>Get Started</h2>
+  <h1 id="show">Get Started</h1>
   <!-- <div class="logo-flag">
 
   </div> -->
   <p><a href='/budgets/new'>Create Your Budget</a></p>
 <% else %>
-  <h2>Welcome Back!</h2>
+  <h1 id="show">Welcome Back!</h1>
   <p><a href='/budgets'>My Dashboard</a></p>
 <% end %>

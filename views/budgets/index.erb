@@ -2,10 +2,10 @@
 <div class="budget-all">
 
   <div id="budget-wrapper">
-    <p><%= @budget.name %></p>
-    <p><%= @budget.display_readable_date_start %> - <%= @budget.display_readable_date_end %></p>
-    <p>Budget Start <%= @budget.display_currency %></p>
-    <p>Budget Remaining <%= @budget.budget_remaining %></p>
+    <h1><%= @budget.name %></h1>
+    <p id="dates"><%= @budget.display_readable_date_start %> - <%= @budget.display_readable_date_end %></p>
+    <h4>Start <%= @budget.display_currency %></h4>
+    <h4>Remaining <%= @budget.budget_remaining %></h4>
   </div>
 
 <progress value=<%=@budget.budget_remaining_rounded%> max=<%=@budget.amount.round%>></progress>
@@ -17,6 +17,9 @@
     <div class="show-budget">
       <p><a href="/budgets/<%= @budget.id %>">Budget Settings</a></p>
     </div>
+    <form action="/budgets/<%= @budget.id %>" method="GET">
+      <input class="buttons" type="submit" value="Budget Settings"/>
+    </form>
 
   </div>
 

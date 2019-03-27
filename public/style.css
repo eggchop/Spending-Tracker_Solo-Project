@@ -3,14 +3,37 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 /* font-family: 'Quicksand', sans-serif; */
 
+* {
+  height: 100;
+  margin: 0;
+  padding: 0;
+}
+
+html,body {
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+  padding-bottom: 100px;
+}
+
+#main {
+  overflow:auto;
+}
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
   text-align: center;
   position:relative;
-  min-height: 100vh;
+  height: 100%;
 
+}
+
+#budget-wrapper p {
+
+  font-style: italic;
 }
 
 /* progress bar */
@@ -35,10 +58,6 @@ progress[value]::-webkit-progress-value {
   background-color: gold;
 
 }
-
-
-
-
 
 .container {
   display: flex;
@@ -202,19 +221,41 @@ thead {
   margin: 25px;
 }
 
+
+#dates {
+  margin-bottom:15px;
+}
+
 .budget-info {
  display: flex;
  align-items: center;
  justify-content: center;
-
-
 }
 
-.footer {
-  padding: 5px;
-  margin-top: 20%;
+progress {
+  margin-top: 15px;
+}
+
+.show-budget {
+  margin-left: 10px;
+}
+
+#show {
+  margin-bottom: 20px;
+}
+
+
+footer {
+  clear:both;
+  margin-top: -100px;
   text-align: center;
   border-top: grey 3px solid;
   background-color: black;
+  position: relative;
+  height: 100px;
   color: #e5e5e5;
+}
+
+footer h3 {
+  padding-top: 40px;
 }
