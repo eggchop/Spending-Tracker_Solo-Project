@@ -32,7 +32,7 @@ class Transaction
 
   def self.all
     sql = "SELECT * FROM transactions
-          ORDER BY date_added"
+          ORDER BY date_added DESC"
     return SqlRunner.run(sql).map{|hash| Transaction.new(hash)}
   end
 
@@ -62,7 +62,7 @@ class Transaction
             JOIN tags
             ON tags.id = transactions.tag_id
             WHERE tags.name = $1
-            ORDER BY transactions.date_added"
+            ORDER BY transactions.date_added DESC"
       values = [tag_name.downcase]
       return SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
     end
@@ -73,7 +73,7 @@ class Transaction
           JOIN merchants
           ON merchants.id = transactions.merchant_id
           WHERE merchants.name = $1
-          ORDER BY transactions.date_added"
+          ORDER BY transactions.date_added DESC"
     values = [merchant_name.downcase]
     return SqlRunner.run(sql, values).map{|hash| Transaction.new(hash)}
   end

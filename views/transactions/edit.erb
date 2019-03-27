@@ -47,20 +47,20 @@
     </div>
 
     <div class="form-new-transaction">
-      <input type="submit" value="Update Transaction"/>
+      <input class="buttons" type="submit" value="Update Transaction"/>
     </div>
 
   </div>
 </form>
 
 <form action="/transactions/<%= @transaction.id %>/delete" method="post">
-  <input type="submit" value="Delete"/>
+  <input class="buttons" type="submit" value="Delete"/>
 </form>
 
 <form action="/merchants/new" method="GET">
-  <input type="submit" value="New Merchant"/>
+  <input class="buttons" type="submit" value="New Merchant"/>
 </form>
 
 <form action="/tags/new/" method="GET">
-  <input type="submit" value="New Tag"/>
+  <input class="buttons" type="submit" value="New Tag"/>
 </form>

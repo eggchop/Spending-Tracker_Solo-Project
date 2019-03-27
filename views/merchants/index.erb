@@ -1,11 +1,11 @@
-<h2>Merchants</h2>
 
 <div id="merchant-wrapper">
+
+  <form action="/merchants/new" method="GET">
+    <input class="buttons" type="submit" value="New Merchant"/>
+  </form>
+
   <table class="merchtag">
-    <tr>
-      <th>Name</th>
-      <th></th>
-    </tr>
 
   <% @merchants.each do |merchant| %>
     <tr>
@@ -15,8 +15,6 @@
     <% end %>
   </table>
 
-  <form action="/merchants/new" method="GET">
-    <input type="submit" value="New Merchant"/>
-  </form>
+
 
 </div>

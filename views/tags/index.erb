@@ -1,13 +1,13 @@
-<h2>Tags</h2>
+
 
 <div id="tag-wrapper">
+
+  <form action="/tags/new" method="GET">
+    <input class="buttons" type="submit" value="New Tag"/>
+  </form>
+
   <table class="merchtag">
-    <thead>
-    <tr>
-      <th>Name</th>
-      <th></th>
-    </tr>
-  </thead>
+
   <% @tags.each do |tag| %>
     <tr>
       <td><%= tag.name.capitalize%></td>
@@ -16,8 +16,5 @@
     <% end %>
   </table>
 
-  <form action="/tags/new/" method="GET">
-    <input type="submit" value="New Tag"/>
-  </form>
 
 </div>

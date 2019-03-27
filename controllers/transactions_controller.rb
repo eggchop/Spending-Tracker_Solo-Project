@@ -37,7 +37,7 @@ end
 
 post '/transactions' do
   Transaction.new(params).save
-  redirect to '/budgets'
+  redirect to '/transactions'
 end
 
 get '/transactions/:id' do

@@ -8,6 +8,8 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  position:relative;
+  min-height: 100vh;
 
 }
 
@@ -78,6 +80,7 @@ align-items: center;
 .filter-menu{
   display: flex;
   justify-content: center;
+  font-weight: bold;
 }
 
 .filter {
@@ -147,6 +150,9 @@ th, td {
 tbody tr:nth-child(odd) {
   background-color: silver;
 }
+thead {
+
+}
 
 
 #view {
@@ -161,6 +167,11 @@ tbody tr:nth-child(odd) {
 .merchtag {
   table-layout: auto;
   width: auto;
+  margin-top: 20px;
+}
+
+.buttons {
+  font-size: 25px;
 }
 
 

@@ -6,7 +6,7 @@
 
 
   <div class="filter">
-    <img src="/images/cross.png" alt="cross"><p><a href="/transactions/new">Create New</a></p>
+    <img src="/images/cross.png" alt="cross"><p><a href="/transactions/new">Add Transaction</a></p>
   </div>
 
   <div class="filter">
@@ -32,7 +32,7 @@
 <table>
   <thead>
   <tr>
-    <th>Date</th>
+    <th>Created</th>
     <th>Merchant</th>
     <th>Cost</th>
     <th>Tag</th>
@@ -51,9 +51,8 @@
     <td><a id="view" href="/transactions/<%= transaction.id %>">View</a></td>
   </tr>
   <% end %>
-  <tr>
-  </tr>
-  </tbody>
+
+
   <tr>
     <td></td>
     <td id="tfoot">Total</td>
