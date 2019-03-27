@@ -23,8 +23,7 @@ tag2.save
 
 budget1 = Budget.new({'name'=> 'March','end_date'=> '2019-05-30', 'amount'=> 300.01})
 budget1.save
-# budget2 = Budget.new({'name'=> '6 Weeks','end_date'=> '2019-04-15', 'amount'=> 150.09})
-# budget2.save
+
 
 transaction1 = Transaction.new({'price'=> 49.08,'tag_id' => tag1.id, 'merchant_id'=> merchant1.id, 'budget_id'=> budget1.id})
 transaction1.save

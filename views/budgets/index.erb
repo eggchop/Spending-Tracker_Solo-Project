@@ -8,6 +8,8 @@
     <p>Budget Remaining <%= @budget.budget_remaining %></p>
   </div>
 
+<progress value=<%=@budget.budget_remaining_rounded%> max=<%=@budget.amount.round%>></progress>
+
   <div class="budget-info">
     <div class="settings-logo">
       <img src="/images/settings.png" alt="settings">

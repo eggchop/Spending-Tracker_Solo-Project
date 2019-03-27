@@ -60,6 +60,10 @@ class Budget
     return "£%.2f" % (@amount - self.total_spend)
   end
 
+  def budget_remaining_rounded
+    return (@amount - self.total_spend).round
+  end
+
   def overbudget?
     return @amount <= 0
   end
