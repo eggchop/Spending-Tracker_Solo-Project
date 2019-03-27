@@ -7,6 +7,7 @@ body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
   padding: 0;
+  text-align: center;
 
 }
 
@@ -85,7 +86,7 @@ align-items: center;
   justify-content:center;
   margin-right: 35px;
   margin-left: 25px;
-  padding-bottom: 5px;
+  padding-bottom: 30px;
 
 }
 
@@ -117,7 +118,7 @@ table {
   border-collapse: collapse;
   border: 2px solid black;
   font-size: 1em;
-  font-style: bold;
+
 }
 thead th:nth-child(1) {
   width: 20%;
@@ -154,15 +155,18 @@ tbody tr:nth-child(odd) {
 }
 
 #tfoot {
- font-style: bold;
+ font-weight: bold;
 }
 
-
+.merchtag {
+  table-layout: auto;
+  width: auto;
+}
 
 
 .footer {
   padding: 5px;
-  margin-top: 30%;
+  margin-top: 20%;
   text-align: center;
   border-top: grey 3px solid;
   background-color: black;
