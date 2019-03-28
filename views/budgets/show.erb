@@ -8,6 +8,7 @@
       <th>Start Date</th>
       <th>End Date</th>
       <th>Amount</th>
+      <th></th>
     </tr>
     </thead>
     <tr>
@@ -15,11 +16,10 @@
       <td><%= @budget.display_readable_date_start%></td>
       <td><%= @budget.display_readable_date_end %></td>
       <td><%= @budget.display_currency %></td>
+      <td><form action="/budgets/<%= @budget.id %>/delete" method="post">
+        <input id="buttons-delete" type="submit" value=""/></form>
+      </td>
     </tr>
   </table>
 
 </div>
-
-<form action="/budgets/<%= @budget.id %>/delete" method="post">
-  <input class= "buttons" type="submit" value="Delete"/>
-</form>
