@@ -10,7 +10,10 @@
   <% @merchants.each do |merchant| %>
     <tr>
       <td><%= merchant.name.capitalize%></td>
-      <td><a href="/merchants/<%= merchant.id %>">View</a></td>
+      <td><a href="/merchants/<%= merchant.id %>/edit"><img src="/images/edit.png" alt="edit"></a></td>
+      <td><form action="/merchants/<%= merchant.id %>/delete" method="post">
+        <input id="buttons-delete" type="submit" value=""/>
+      </form></td>
     </tr>
     <% end %>
   </table>

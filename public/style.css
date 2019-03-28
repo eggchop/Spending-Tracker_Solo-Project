@@ -218,12 +218,12 @@ tbody tr:nth-child(odd) {
   margin-top: 20px;
 }
 
- #buttons-delete{
-    background:url(/images/bin2.png) no-repeat;
-    cursor:pointer;
-    width: 25px;
-    height: 25px;
-    border: none;
+#buttons-delete{
+  background:url(/images/bin2.png) no-repeat;
+  cursor:pointer;
+  width: 25px;
+  height: 25px;
+  border: none;
 }
 
 #buttons-filter {
