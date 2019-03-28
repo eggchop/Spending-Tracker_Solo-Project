@@ -135,6 +135,7 @@ align-items: center;
   margin-right: 35px;
   margin-left: 25px;
   padding-bottom: 30px;
+  font-weight: bold;
 
 }
 
@@ -236,6 +237,15 @@ tbody tr:nth-child(odd) {
 
 #dates {
   margin-bottom:15px;
+}
+
+.form-wrapper-m {
+  display: flex;
+  justify-content: center;
+}
+
+.form-button {
+  margin-left: 5px;
 }
 
 .budget-info {

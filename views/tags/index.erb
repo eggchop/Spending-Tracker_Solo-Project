@@ -2,16 +2,19 @@
 
 <div id="tag-wrapper">
 
-  <form action="/tags/new" method="GET">
-    <input class="buttons" type="submit" value="New Tag"/>
-  </form>
+  <div class="filter">
+    <img src="/images/cross.png" alt="cross"><p><a href="/tags/new">Add Tag</a></p>
+  </div>
 
   <table class="merchtag">
 
   <% @tags.each do |tag| %>
     <tr>
       <td><%= tag.name.capitalize%></td>
-      <td><a href="/tags/<%= tag.id %>">View</a></td>
+      <td><a href="/tags/<%= tag.id %>/edit"><img src="/images/edit.png" alt="edit"></a></td>
+      <td><form action="/tags/<%= tag.id %>/delete" method="post">
+        <input id="buttons-delete" type="submit" value=""/>
+      </form></td>
     </tr>
     <% end %>
   </table>

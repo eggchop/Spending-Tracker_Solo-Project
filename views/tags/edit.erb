@@ -1,19 +1,15 @@
 <h1 id="show">Edit Tag</h1>
 <form method="POST" action="/tags/<%=@tag.id%>">
-  <div class="form-wrapper">
+  <div class="form-wrapper-m">
 
     <div class="form-edit-tag">
       <label for="name">Tag Name:</label>
       <input type="text" name="name" id="name" value="<%=@tag.name.capitalize%>"/>
     </div>
 
-    <div class="form-edit-tag">
-      <input class="buttons" type="submit" value="Update Tag"/>
+    <div class="form-button">
+      <input class="buttons" type="submit" value="Update"/>
     </div>
 
   </div>
-</form>
-
-<form action="/tags/<%= @tag.id %>/delete" method="post">
-  <input class="buttons" type="submit" value="Delete"/>
 </form>
