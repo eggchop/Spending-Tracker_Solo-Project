@@ -22,12 +22,6 @@ post '/tags' do
   redirect to '/tags'
 end
 
-
-get '/tags/:id' do
-  @tag = Tag.find(params[:id])
-  erb(:"tags/show")
-end
-
 get '/tags/:id/edit' do
   @tag = Tag.find(params[:id])
   erb(:"tags/edit")
