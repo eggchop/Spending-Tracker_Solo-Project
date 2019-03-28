@@ -9,7 +9,7 @@ require 'pry'
 Merchant.delete_all
 Tag.delete_all
 Budget.delete_all
-Transaction.delete_all
+# Transaction.delete_all
 
 merchant1 = Merchant.new({'name'=>'Tesco'})
 merchant1.save
@@ -32,6 +32,12 @@ tag4 = Tag.new({'name'=> 'dinner'})
 tag4.save
 tag4 = Tag.new({'name'=> 'shopping'})
 tag4.save
+tag5 = Tag.new({'name'=> 'beauty'})
+tag5.save
+tag6 = Tag.new({'name'=> 'misc'})
+tag6.save
+tag7 = Tag.new({'name'=> 'vices'})
+tag7.save
 
 budget1 = Budget.new({'name'=> "Charlie's Budget",'end_date'=> '2019-04-19', 'amount'=> 1000.00})
 budget1.save
@@ -45,3 +51,31 @@ transaction2 = Transaction.new({'price'=> 30.00,'tag_id' => tag3.id, 'merchant_i
 transaction2.save
 transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
 transaction3.save
+transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag5.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3.save
+transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag6.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3.save
+transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag7.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3.save
+transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3.save
+
+# tags = Transaction.all_tags_in_use
+#
+# total_dict = {}
+# tags.each do |item|
+#   total = Transaction.total_by_tag(item)
+#   total_dict[item] = total
+# end
+# @total_dict_sorted = total_dict.sort_by{ |k, v| v }
+#
+# p total_dict
+#
+# result = total_dict.sort_by{ |k, v| v }
+# p result
+#
+# 5.times do
+#   tag, value = result.pop
+#   p tag
+#   p value
+# end

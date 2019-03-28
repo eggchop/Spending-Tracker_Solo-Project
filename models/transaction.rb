@@ -128,4 +128,5 @@ class Transaction
     return SqlRunner.run(sql,values).first['total'].to_f
   end
 
+
 end
