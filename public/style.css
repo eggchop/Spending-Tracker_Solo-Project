@@ -243,9 +243,21 @@ tbody tr:nth-child(odd) {
   margin-bottom:15px;
 }
 
+#days {
+  margin-bottom: 25px;
+}
+
+#form_align p {
+  margin-top: 10px;
+
+}
 .form-wrapper-m {
   display: flex;
   justify-content: center;
+}
+
+.form-new-transaction {
+  margin-top: 15px;
 }
 
 .form-button {
@@ -275,7 +287,6 @@ progress {
 #show {
   margin-bottom: 40px;
 }
-
 
 footer {
   clear:both;

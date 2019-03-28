@@ -1,25 +1,20 @@
 <h1 id="show">New Budget</h1>
-<form method="POST" action="/budgets">
-  <div class="form-wrapper">
+<form id="form_align" method="POST" action="/budgets">
 
-    <div class="form-new-budget">
-      <label for="name">Name:</label>
-      <input autocomplete="off" type="text" name="name" />
-    </div>
-
-    <div class="form-new-budget">
-      <label for="end_date">End Date:</label>
-      <input type="date" name="end_date" />
-    </div>
-
-    <div class="form-new-budget">
-      <label for="amount">Amount:</label>
-      <input type="number" name="amount" step = "0.01" id="amount" pattern="^\d*(\.\d{0,2})?$"/>
-    </div>
-
-    <div class="form-new-budget">
-      <input class="buttons" type="submit" value="Create Budget"/>
-    </div>
-
-  </div>
+<p>
+  <label for="name">
+    Name:
+  <input autocomplete="off" type="text" name="name" required/>
+  </label></p>
+<p>
+  <label for="end_date">End Date:</label>
+  <input type="date" name="end_date" />
+</p>
+<p>
+  <label for="amount">Amount:</label>
+  <input type="number" name="amount" step = "0.01" id="amount" pattern="^\d*(\.\d{0,2})?$" required/>
+</p>
+<p>
+  <input class="buttons" type="submit" value="Create"/>
+</p>
 </form>

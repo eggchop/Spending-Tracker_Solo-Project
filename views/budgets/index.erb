@@ -4,7 +4,9 @@
   <div id="budget-wrapper">
     <h1><%= @budget.name %></h1>
     <p id="dates"><%= @budget.display_readable_date_start %> - <%= @budget.display_readable_date_end %></p>
-    <h4 id="start">Start <%= @budget.display_currency %></h4>
+    <h4 id="start">Budget <%= @budget.display_currency %></h4>
+
+
     <h4 id="remaining">Balance <%= @budget.budget_remaining %></h4>
   </div>
 
@@ -15,6 +17,8 @@
   </style>
 <progress value=<%=@budget.budget_remaining_rounded%> max=<%=@budget.amount.round%>></progress>
 
+  <h4 id="days"><%=@budget.days_left%> days remaining</h4>
+  
   <div class="budget-info">
     <div class="settings-logo">
       <img src="/images/settings.png" alt="settings">

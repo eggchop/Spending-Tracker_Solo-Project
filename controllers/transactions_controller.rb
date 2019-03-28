@@ -10,7 +10,7 @@ also_reload('../models/*')
 get '/transactions' do
   @transactions = Transaction.all
   @total_trans = Transaction.total
-  erb(:"transactions/index")
+  Budget.all.length == 1 ? erb(:"transactions/index") : redirect("/")
 end
 
 #display all transactions by merchant

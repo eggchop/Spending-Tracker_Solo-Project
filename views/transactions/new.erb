@@ -1,9 +1,9 @@
 <h1 id="show">New Transaction</h1>
-<form method="POST" action="/transactions">
-  <div class="form-wrapper">
+<form id = "form-wrapper-transaction" method="POST" action="/transactions">
+  <div class="form-wrapper-transaction">
     <div class="form-new-transaction">
       <label for="price">Price:</label>
-      <input type="number" name="price" step = "0.01" id="price" pattern="^\d*(\.\d{0,2})?$"/>
+      <input type="number" name="price" step = "0.01" id="price" pattern="^\d*(\.\d{0,2})?$" required/>
     </div>
 
     <div class="form-new-transaction">
@@ -34,16 +34,8 @@
     </div>
 
     <div class="form-new-transaction">
-      <input class="buttons" type="submit" value="Create Transaction"/>
+      <input class="buttons" type="submit" value="Create"/>
     </div>
 
   </div>
-</form>
-
-<form action="/merchants/new" method="GET">
-  <input class="buttons" type="submit" value="New Merchant"/>
-</form>
-
-<form action="/tags/new" method="GET">
-  <input class="buttons" type="submit" value="New Tag"/>
 </form>

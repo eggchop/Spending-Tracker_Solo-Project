@@ -9,7 +9,7 @@ also_reload('../models/*')
 
 get '/budgets' do
   @budget = Budget.all.first
-  erb(:"budgets/index")
+  Budget.all.length == 1 ? erb(:"budgets/index") : redirect("/")
 end
 
 get '/budgets/new' do

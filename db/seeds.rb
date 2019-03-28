@@ -24,9 +24,13 @@ tag1 = Tag.new({'name'=> 'groceries'})
 tag1.save
 tag2 = Tag.new({'name'=> 'transport'})
 tag2.save
-tag3 = Tag.new({'name'=> 'pub'})
+tag3 = Tag.new({'name'=> 'drinking'})
 tag3.save
-tag4 = Tag.new({'name'=> 'rent'})
+tag4 = Tag.new({'name'=> 'bills'})
+tag4.save
+tag4 = Tag.new({'name'=> 'dinner'})
+tag4.save
+tag4 = Tag.new({'name'=> 'shopping'})
 tag4.save
 
 budget1 = Budget.new({'name'=> "Charlie's Budget",'end_date'=> '2019-04-19', 'amount'=> 1000.00})
@@ -39,5 +43,5 @@ transaction1.save
 # transaction1.update
 transaction2 = Transaction.new({'price'=> 30.00,'tag_id' => tag3.id, 'merchant_id'=> merchant3.id,'budget_id'=> budget1.id})
 transaction2.save
-transaction3 = Transaction.new({'price'=> 400.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
 transaction3.save

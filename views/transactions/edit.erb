@@ -1,6 +1,6 @@
 <h1 id="show">Edit Transaction</h1>
 <form method="POST" action="/transactions/<%=@transaction.id%>">
-  <div class="form-wrapper">
+  <div class="form-wrapper-transaction">
 
     <div class="form-new-transaction">
       <label for="price">Price:</label>
@@ -47,16 +47,8 @@
     </div>
 
     <div class="form-new-transaction">
-      <input class="buttons" type="submit" value="Update Transaction"/>
+      <input class="buttons" type="submit" value="Update"/>
     </div>
 
   </div>
-</form>
-
-<form action="/merchants/new" method="GET">
-  <input class="buttons" type="submit" value="New Merchant"/>
-</form>
-
-<form action="/tags/new" method="GET">
-  <input class="buttons" type="submit" value="New Tag"/>
 </form>
