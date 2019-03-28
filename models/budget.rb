@@ -64,14 +64,22 @@ class Budget
     return (@amount - self.total_spend).round
   end
 
-  def overbudget?
-    return @amount <= 0
+  def budget_progress_bar_color_logic
+    percent = ((self.total_spend / @amount) * 100).round
+    if percent > 69
+      return 'red'
+    elsif percent > 29 && percent < 70
+      return 'gold'
+    else
+      return 'green'
+    end
   end
 
   def display_readable_date_start
     timestamp = Time.parse(@start_date)
     return timestamp.strftime("%d-%b-%y")
   end
+
   def display_readable_date_end
     timestamp = Time.parse(@end_date)
     return timestamp.strftime("%d-%b-%y")

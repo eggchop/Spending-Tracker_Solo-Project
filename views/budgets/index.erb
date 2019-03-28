@@ -8,6 +8,11 @@
     <h4>Remaining <%= @budget.budget_remaining %></h4>
   </div>
 
+  <style media="screen">
+    progress[value]::-webkit-progress-value {
+      background-color: <%=@budget.budget_progress_bar_color_logic%>;
+    }
+  </style>
 <progress value=<%=@budget.budget_remaining_rounded%> max=<%=@budget.amount.round%>></progress>
 
   <div class="budget-info">

@@ -33,7 +33,7 @@ budget1 = Budget.new({'name'=> "Charlie's Budget",'end_date'=> '2019-05-30', 'am
 budget1.save
 
 
-transaction1 = Transaction.new({'price'=> 49.08,'tag_id' => tag1.id, 'merchant_id'=> merchant1.id, 'budget_id'=> budget1.id})
+transaction1 = Transaction.new({'price'=> 70.00,'tag_id' => tag1.id, 'merchant_id'=> merchant1.id, 'budget_id'=> budget1.id})
 transaction1.save
 # transaction1.date_added = Date.new(2017,01,23)
 # transaction1.update
