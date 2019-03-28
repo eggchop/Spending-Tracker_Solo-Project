@@ -85,6 +85,10 @@ class Budget
     return timestamp.strftime("%d-%b-%y")
   end
 
+  def days_left
+    return (Date.parse(@end_date) - Date.today).to_i
+  end
+
   def display_currency
     return "£%.2f" % @amount
   end

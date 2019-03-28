@@ -29,7 +29,7 @@ tag3.save
 tag4 = Tag.new({'name'=> 'rent'})
 tag4.save
 
-budget1 = Budget.new({'name'=> "Charlie's Budget",'end_date'=> '2019-05-30', 'amount'=> 1000.00})
+budget1 = Budget.new({'name'=> "Charlie's Budget",'end_date'=> '2019-04-19', 'amount'=> 1000.00})
 budget1.save
 
 
