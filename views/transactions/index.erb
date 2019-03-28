@@ -13,20 +13,25 @@
 
   <div class="filter">
     <p>Merchant:<form method="GET" id="merchants_form" action=/transactions/merchants>
-    <input type="text" name="search" form="merchants_form" />
-    <button type="submit" form="merchants_form">Filter</button></form>
+    <input autocomplete="off" type="text" name="search" form="merchants_form" />
+    <button id="buttons-filter" type="submit" form="merchants_form">Filter</button></form>
   </div>
 
   <div class="filter">
     <p>Tag:</p>
     <p><form method="GET" id="tags_form" action=/transactions/tags>
-    <input type="text" name="search" form="tags_form" />
-    <button type="submit" form="tags_form">Filter</button></form>
+    <input autocomplete="off" type="text" name="search" form="tags_form" />
+    <button id="buttons-filter" type="submit" form="tags_form">Filter</button></form>
   </div>
 
   <div class="filter">
+    <% unless active_page?('transactions') %>
     <a href='/transactions'>Clear Filter</a>
+    <% else %>
+    <a id="filter-format-hack"></a>
+    <%end%>
   </div>
+
 
 </div>
 
@@ -39,6 +44,8 @@
     <th>Cost</th>
     <th>Tag</th>
     <th></th>
+    <th></th>
+
   </tr>
   </thead>
   <tbody>
@@ -50,15 +57,18 @@
     <td><%= transaction.merchant.name.capitalize %></td>
     <td><%= transaction.display_currency %></td>
     <td><%= transaction.tag.name.capitalize %></td>
-    <td><a id="view" href="/transactions/<%= transaction.id %>">View</a></td>
+    <td><a id="view" href="/transactions/<%= transaction.id %>/edit"><img src="/images/edit.png" alt="edit"></a></td>
+    <td>
+      <form action="/transactions/<%= transaction.id %>/delete" method="post">
+      <input id="buttons-delete" type="submit" value=""/></form>
+    </td>
   </tr>
   <% end %>
-
-
   <tr>
     <td></td>
     <td id="tfoot">Total</td>
     <td id="tfoot"><%= "£%.2f" % @total_trans%></td>
+    <td></td>
     <td></td>
     <td></td>
   </tr>

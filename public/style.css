@@ -160,12 +160,12 @@ align-items: center;
 table {
   text-align: center;
   table-layout: fixed;
-  width: 80%;
+  width: 70%;
   margin: auto;
   padding-top: 50px;
   border-collapse: collapse;
   border: 2px solid black;
-  font-size: 1em;
+  font-size: 1.1em;
 
 }
 thead th:nth-child(1) {
@@ -185,11 +185,18 @@ thead th:nth-child(4) {
 }
 
 thead th:nth-child(5) {
-  width: 20%;
+  width: 10%;
 }
 
-th, td {
-  padding: 5px 20px;
+thead th:nth-child(6) {
+  width: 10%;
+}
+
+td {
+  padding: 3px 20px;
+}
+th,tfoot {
+  padding: 8px 20px;
 }
 
 tbody tr:nth-child(odd) {
@@ -211,8 +218,21 @@ tbody tr:nth-child(odd) {
   margin-top: 20px;
 }
 
-.buttons {
-  font-size: 15px;
+ #buttons-delete{
+    background:url(/images/bin2.png) no-repeat;
+    cursor:pointer;
+    width: 25px;
+    height: 25px;
+    border: none;
+}
+
+#buttons-filter {
+  width: 40px;
+  height: 20px;
+}
+
+#filter-format-hack {
+  width: 85px;
 }
 
 #dates {
