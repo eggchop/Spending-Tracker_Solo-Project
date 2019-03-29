@@ -49,15 +49,15 @@ transaction1.save
 # transaction1.update
 transaction2 = Transaction.new({'price'=> 30.00,'tag_id' => tag3.id, 'merchant_id'=> merchant3.id,'budget_id'=> budget1.id})
 transaction2.save
-transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3 = Transaction.new({'price'=> 23.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
 transaction3.save
-transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag5.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3 = Transaction.new({'price'=> 23.00,'tag_id' => tag5.id, 'merchant_id'=> merchant3.id,'budget_id'=> budget1.id})
 transaction3.save
-transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag6.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3 = Transaction.new({'price'=> 23.00,'tag_id' => tag6.id, 'merchant_id'=> merchant4.id,'budget_id'=> budget1.id})
 transaction3.save
-transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag7.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3 = Transaction.new({'price'=> 23.00,'tag_id' => tag7.id, 'merchant_id'=> merchant1.id,'budget_id'=> budget1.id})
 transaction3.save
-transaction3 = Transaction.new({'price'=> 300.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
+transaction3 = Transaction.new({'price'=> 23.00,'tag_id' => tag4.id, 'merchant_id'=> merchant2.id,'budget_id'=> budget1.id})
 transaction3.save
 
 # tags = Transaction.all_tags_in_use
