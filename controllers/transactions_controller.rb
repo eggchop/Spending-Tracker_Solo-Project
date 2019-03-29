@@ -52,7 +52,7 @@ end
 post '/transactions/:id' do
   transaction = Transaction.new(params)
   transaction.update
-  redirect to "/transactions/#{params[:id]}"
+  redirect to "/transactions"
 end
 
 post '/transactions/:id/delete' do
