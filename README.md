@@ -1,10 +1,11 @@
-# w05_spending_tracker
 
-* HTML / CSS
-* Ruby
-* Sinatra
-* PostgreSQL and the PG gem
+# Spending Tracker (1-week Solo Project)
 
+Build an app that allows a user to track their spending.
+
+#### Inspired by:
+
+Monzo, MoneyDashboard, lots of mobile/online banking apps
 
 ## Rules
 
@@ -21,14 +22,6 @@ It must **NOT** use:
 * JavaScript. At all. Don't even think about it.
 * Any pre-built CSS libraries, such as Bootstrap.
 * Authentication. Assume that the user already has secure access to the app.
-
-# Spending Tracker
-
-Build an app that allows a user to track their spending.
-
-#### Inspired by:
-
-Monzo, MoneyDashboard, lots of mobile/online banking apps
 
 ## MVP
 
