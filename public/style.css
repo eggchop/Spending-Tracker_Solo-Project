@@ -32,7 +32,6 @@ body {
   text-align: center;
   position:relative;
   height: 100%;
-
 }
 
 #budget-wrapper p {
@@ -82,7 +81,6 @@ progress[value]::-webkit-progress-bar {
   margin-top: 20px;
   margin-left: 5px;
   height: 90%;
-
 }
 
 nav div p {
@@ -123,7 +121,6 @@ ul {
 
 section {
 align-items: center;
-
 }
 
 .filter-menu{
@@ -140,7 +137,6 @@ align-items: center;
   margin-left: 25px;
   padding-bottom: 30px;
   font-weight: bold;
-
 }
 
 .filter a {
@@ -160,7 +156,6 @@ align-items: center;
 .filter p {
   font-style: inherit;
 }
-
 
 table {
   text-align: center;
