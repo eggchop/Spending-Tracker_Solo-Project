@@ -1,5 +1,9 @@
 # w05_spending_tracker
-Ruby, Sinatra and PostGRES SQL web app.
+
+* HTML / CSS
+* Ruby
+* Sinatra
+* PostgreSQL and the PG gem
 
 
 ## Rules
