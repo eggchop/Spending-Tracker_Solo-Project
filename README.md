@@ -43,3 +43,15 @@ It must **NOT** use:
 * Transactions should have a timestamp, and the user should be able to view transactions sorted by the time they took place.
 * The user should be able to supply a budget, and the app should alert the user somehow when they are nearing this budget or have gone over it.
 * The user should be able to filter their view of transactions, for example, to view all transactions in a given month, or view all spending on groceries.
+
+## Sceenshot Examples
+
+Here are two key pages of the app.
+
+### Budget Dashboard
+![Dashboard](https://user-images.githubusercontent.com/30385421/55281560-2a9c5400-532e-11e9-9c00-235522697af1.png)
+
+### All Transactions
+![Transactions](https://user-images.githubusercontent.com/30385421/55281582-72bb7680-532e-11e9-8217-f3aed42e917b.png)
+
+
