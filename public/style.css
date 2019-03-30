@@ -47,6 +47,7 @@ body {
 progress {
 border: 2px solid black;
 }
+
 progress[value] {
   /* Reset the default appearance */
 -webkit-appearance: none;
@@ -166,8 +167,8 @@ table {
   border-collapse: collapse;
   border: 2px solid black;
   font-size: 1.1em;
-
 }
+
 thead th:nth-child(1) {
   width: 20%;
 }
@@ -195,6 +196,7 @@ thead th:nth-child(6) {
 td {
   padding: 3px 20px;
 }
+
 th,tfoot {
   padding: 8px 20px;
 }
@@ -244,8 +246,8 @@ tbody tr:nth-child(odd) {
 
 #form_align p {
   margin-top: 10px;
-
 }
+
 .form-wrapper-m {
   display: flex;
   justify-content: center;
