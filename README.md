@@ -1,4 +1,9 @@
 
+```diff
++ this will be highlighted in green
+- this will be highlighted in red
+```
+
 # Spending Tracker (1-week Solo Project)
 
 I chose this brief at CodeClan as my solo project.
