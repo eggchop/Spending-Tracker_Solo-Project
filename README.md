@@ -46,7 +46,7 @@ It must **NOT** use:
 
 ## Sceenshot Examples
 
-Here are two key pages of the app.
+Below are two key pages of my app.
 
 ### Budget Dashboard
 ![Dashboard](https://user-images.githubusercontent.com/30385421/55281560-2a9c5400-532e-11e9-9c00-235522697af1.png)
