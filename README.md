@@ -1,7 +1,7 @@
 
 # Spending Tracker (1-week Solo Project)
 
-This is the brief I chose at CodeClan for my solo project.
+I chose this brief at CodeClan as my solo project.
 
 ## Brief
 Build an app that allows a user to track their spending.
