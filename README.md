@@ -51,5 +51,3 @@ It must **NOT** use:
 
 ### All Transactions
 ![Transactions](https://user-images.githubusercontent.com/30385421/55281582-72bb7680-532e-11e9-8217-f3aed42e917b.png)
-
-

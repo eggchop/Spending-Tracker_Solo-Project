@@ -1,10 +1,9 @@
 require('sinatra')
-require('sinatra/contrib/all')
+require('sinatra/contrib/all') if development?
 require_relative('../models/budget')
 require_relative('../models/transaction')
 require_relative('../models/tag')
 require_relative('../models/merchant')
-also_reload('../models/*')
 
 
 get '/budgets' do
